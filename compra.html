@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatVino</title>
+    <link rel="stylesheet" href="compraStyle.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <img
+        src="ImgBarricaBanner.jpg"
+        alt="Selección de vinos españoles"
+        id="banner-img"
+      />
+      <div id="content">
+        <h1>ChatVino</h1>
+        <p>
+          Compra y descubre vinos españoles a través del uso de un Chatbot y
+          vive nuevas experiencias
+        </p>
+        <button
+          onclick="window.location.href='https://chatvino.es/chatvino/login2.html'"
+        >
+          Compra ya
+        </button>
+      </div>
+    </div>
+    <nav id="navigation">
+      <ul>
+        <li>
+          <a href="inicio.html" rel="noopener noreferrer">Inicio</a>
+        </li>
+        <li>
+          <a href="descubre.html" rel="noopener noreferrer">Descubre</a>
+        </li>
+        <li>
+          <a href="login.html" rel="noopener noreferrer">Chatbot</a>
+        </li>
+        <li>
+          <a href="login2.html" rel="noopener noreferrer">Vinos</a>
+        </li>
+        <li>
+          <a href="contacto.html" rel="noopener noreferrer">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="about-chatvino">
+      <div class="about-text">
+        <h2>Proceso de Compra</h2>
+        <p>
+          En esta sección puedes comprar las botellas de vino en las que estés
+          interasado/a, de forma que puedas obtener el vino ideal que estás
+          buscando
+        </p>
+      </div>
+    </section>
+    <section id="search-wine">
+      <div class="search-container">
+        <h2>Buscar Vino</h2>
+
+        <!-- Campo de búsqueda por texto -->
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Escribe el nombre del vino..."
+        />
+        <button onclick="searchWine()">Buscar</button>
+
+        <!-- Menú desplegable -->
+        <select id="wine-dropdown">
+          <option value="">Selecciona un vino</option>
+          <!-- Las opciones se llenarán dinámicamente -->
+        </select>
+        <button onclick="searchWineDropdown()">Buscar en Dropdown</button>
+
+        <div id="search-results"></div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="catasStyle.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <img
+        src="ImgBarricaBanner.jpg"
+        alt="Selección de vinos españoles"
+        id="banner-img"
+      />
+      <div id="content">
+        <h1>ChatVino</h1>
+        <p>
+          Compra y descubre vinos españoles a través del uso de un Chatbot y
+          vive nuevas experiencias
+        </p>
+        <button
+          onclick="window.location.href='https://chatvino.es/chatvino/login2.html'"
+        >
+          Compra ya
+        </button>
+      </div>
+    </div>
+    <nav id="navigation">
+      <ul>
+        <li>
+          <a href="Inicio.html" rel="noopener noreferrer">Inicio</a>
+        </li>
+        <li>
+          <a href="descubre.html" rel="noopener noreferrer">Descubre</a>
+        </li>
+        <li>
+          <a href="login.html" rel="noopener noreferrer">Chatbot</a>
+        </li>
+        <li>
+          <a href="catas.html" class="active" rel="noopener noreferrer"
+            >Vinos</a
+          >
+        </li>
+        <li>
+          <a href="contacto.html" rel="noopener noreferrer">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="catalogo">
+      <div class="about-text">
+        <h2>Catálogo de productos</h2>
+        <p>
+          <strong>ChatVino</strong> ofrece una <strong>amplia gama</strong> de
+          <strong>vinos</strong>, desde
+          <strong>tintos tradicionales</strong> hasta
+          <strong>exclusivos espumosos</strong>. Esta diversidad
+          <strong>asegura</strong> que cada
+          <strong>consumidor encuentre</strong> su <strong>vino ideal</strong>,
+          adaptándose a gustos y ocasiones variadas. Incluye también
+          <strong>blancos frescos</strong>, <strong>rosados ligeros</strong> y
+          vinos de autor. Cada <strong>botella</strong> en ChatVino es una
+          <strong>invitación</strong> a explorar
+          <strong>sabores únicos</strong> y
+          <strong>vivir experiencias</strong> enológicas
+          <strong>inolvidables</strong>.
+        </p>
+      </div>
+    </section>
+    <section id="catalogo-botellas">
+      <h2>BOTELLAS EN EL CATÁLOGO</h2>
+      <p2
+        ><br />Aquí puedes ver un <strong>ejemplo</strong> de las
+        <strong>botellas</strong> que <strong>disponemos</strong>, para su mejor
+        comprensión se muestra una <strong>breve descripción</strong> y además
+        la <strong>puntuación</strong> otorgada por
+        <strong>nuestros expertos</strong></p2
+      >
+      <!-- Aquí se mostrarán las botellas -->
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("http://localhost:3000/api/botellas")
+          .then((response) => response.json())
+          .then((botellas) => {
+            const catalogo = document.getElementById("catalogo-botellas");
+            const lista = document.createElement("ul");
+            const palabrasDestacadas = [
+              "vino tinto",
+              "Vino tinto",
+              "Vino blanco",
+              "vino blanco",
+              "vino excepcional",
+              "tinto",
+              "espumoso",
+              "blanco",
+              "rosado",
+              "autor",
+              "gran estructura",
+              "complejidad",
+              "aromas",
+              "frutas negras",
+              "notas balsámicas",
+              "rico",
+              "Rico",
+              "complejo",
+              "frutas rojas maduras",
+              "frutas rojas",
+              "vainilla",
+              "toque",
+              "roble francés",
+              "roble",
+              "clásico",
+              "Clásico",
+              "elegante",
+              "cuero",
+              "equilibrio perfecto",
+              "equilibrio",
+            ];
+
+            botellas.forEach((botella, index) => {
+              let descripcion = botella.Descripcion;
+
+              // Resalta las palabras en la descripción
+              palabrasDestacadas.forEach((palabra) => {
+                const regex = new RegExp(`\\b${palabra}\\b`, "gi");
+                descripcion = descripcion.replace(
+                  regex,
+                  `<strong>${palabra}</strong>`
+                );
+              });
+
+              const item = document.createElement("li");
+              if (index === 0) {
+                // Verifica si es el primer elemento
+                item.classList.add("first-item");
+              }
+              item.innerHTML = `
+                <img src="${botella.ImagenURL}" alt="${botella.Nombre}" style="width:100px; height:auto; margin-right: 10px;">
+                <div>
+                  <h3>${botella.Nombre}</h3>
+                  <p>${descripcion}</p>
+                  <p><strong>Calificación: </strong>${botella.Calificacion}</p>
+                  <div class="rating">
+                    <span class="rate-text">Puedes valorar la botella:</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <button class="btn-comprar" onclick="comprarBotella('${botella.BotellaID}', '${botella.Nombre}')">Comprar</button>
+                </div>`;
+              item.style.display = "flex";
+              item.style.alignItems = "center";
+              lista.appendChild(item);
+
+              // Agregar funcionalidad de clic y mouseover a las estrellas
+              item.querySelectorAll(".star").forEach((star, index, stars) => {
+                star.onmouseover = function () {
+                  stars.forEach((s, i) => {
+                    if (i <= index) {
+                      s.classList.add("hovered");
+                    } else {
+                      s.classList.remove("hovered");
+                    }
+                  });
+                };
+                star.onmouseout = function () {
+                  stars.forEach((s) => s.classList.remove("hovered"));
+                };
+                star.onclick = function () {
+                  alert(
+                    `Botella: ${botella.Nombre}, Valoración: ${this.dataset.value}`
+                  );
+                  const valoracion = this.dataset.value;
+                  const botellaId = botella.BotellaID; // Asegúrate de tener el ID de la botella
+
+                  fetch("http://localhost:3000/api/valorar", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ botellaId, valoracion }),
+                  })
+                    .then((response) => response.json())
+                    .then((data) => console.log(data))
+                    .catch((error) => console.error("Error:", error));
+                };
+              });
+            });
+            catalogo.appendChild(lista);
+          })
+          .catch((error) => console.error("Error:", error));
+      });
+      function comprarBotella(botellaId, nombreBotella) {
+        var modal = document.getElementById("modalCompra");
+        var span = document.getElementsByClassName("close-button")[0];
+
+        // Actualizar el contenido del modal con el nombre de la botella
+        var contenidoModal = modal.querySelector(".modal-content p");
+        contenidoModal.innerHTML =
+          "Has comprado la botella: <strong>" +
+          nombreBotella +
+          "</strong> con éxito.";
+
+        // Mostrar el modal
+        modal.style.display = "block";
+
+        // Eventos para cerrar el modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      }
+    </script>
+    <div id="modalCompra" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Compra Confirmada</h2>
+        <p>Has comprado la botella con éxito.</p>
+      </div>
+    </div>
+  </body>
+</html>

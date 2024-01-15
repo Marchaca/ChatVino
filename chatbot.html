@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chatbotStyle.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <img
+        src="ImgBarricaBanner.jpg"
+        alt="Selección de vinos españoles"
+        id="banner-img"
+      />
+      <div id="content">
+        <h1>ChatVino</h1>
+        <p>
+          Compra y descubre vinos españoles a través del uso de un Chatbot y
+          vive nuevas experiencias
+        </p>
+        <button
+          onclick="window.location.href='https://chatvino.es/chatvino/login2.html'"
+        >
+          Compra ya
+        </button>
+      </div>
+    </div>
+    <nav id="navigation">
+      <ul>
+        <li>
+          <a href="inicio.html" rel="noopener noreferrer">Inicio</a>
+        </li>
+        <li>
+          <a href="descubre.html" rel="noopener noreferrer">Descubre</a>
+        </li>
+        <li>
+          <a href="chatbot.html" class="active" rel="noopener noreferrer"
+            >Chatbot</a
+          >
+        </li>
+        <li>
+          <a href="login2.html" rel="noopener noreferrer">Vinos</a>
+        </li>
+        <li>
+          <a href="contacto.html" rel="noopener noreferrer">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="about-chatvino">
+      <h2>Uso del Chatbot</h2>
+      <p>
+        <strong>ChatVino</strong> es una <strong>plataforma</strong> que
+        pretende <strong>innovar</strong> en el <strong>sector</strong> de la
+        <strong>venta</strong> de <strong>vino online</strong> a través de la
+        <strong>utilización</strong> de un <strong>Chatbot</strong>, con el cual
+        pueda <strong>ofrecer</strong> las
+        <strong>mejores recomendaciones</strong> de vinos a los
+        <strong>usuarios</strong>
+        dependiendo de sus <strong>gustos</strong> u otras
+        <strong>preferencias</strong>. Con la <strong>utilización</strong> de
+        este <strong>Chatbot</strong> el usuario puede
+        <strong>descubrir vinos</strong> que anteriormente
+        <strong>no conocía</strong>, a la vez que puede
+        <strong>preguntar</strong> al <strong>Chatbot</strong> sobre las
+        <strong>características</strong> e <strong>historia</strong> de las
+        <strong>botellas</strong>.
+      </p>
+    </div>
+
+    <div class="chatbot-page-container">
+      <div id="instructionsContainer" class="chatbot-instructions">
+        <!-- Contenido de las instrucciones -->
+        <h2>Instrucciones</h2>
+        <p>
+          Para <strong>utilizar</strong> el <strong>Chatbot</strong> de
+          <strong>ChatVino</strong> se deben <strong>seguir</strong> los
+          siguientes <strong>pasos</strong>:
+        </p>
+        <ul>
+          <li>
+            <strong>Rellenar</strong> el <strong>formulario</strong> (puede
+            haber campos vacíos)
+          </li>
+          <li><strong>Hablar</strong> con el <strong>Chatbot</strong></li>
+          <li>
+            <strong>Disfrutar</strong> de la <strong>experiencia!</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="chatbot-form-container">
+        <form id="chatbotForm" class="chatbot-form">
+          <h2>Explora Vinos con Nuestro Chatbot</h2>
+
+          <div class="form-group">
+            <label for="evento">Tipo de Evento/Objetivo de la Compra:</label>
+            <select name="evento" id="evento">
+              <option class="placeholder" value="" disabled selected></option>
+              <option value="fiesta_familia">Fiesta con la familia</option>
+              <option value="cena_amigos">Cena con amigos</option>
+              <option value="regalo">Regalo</option>
+              <option value="regalo">Explorar nuevos sabores</option>
+              <option value="regalo">Celebración especial</option>
+              <option value="regalo">Cita romántica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="estacion">Estación del Año/Contexto de Consumo:</label>
+            <select name="estacion" id="estacion" required>
+              <option class="placeholder" value="" disabled selected></option>
+              <option value="primavera">Primavera</option>
+              <option value="verano">Verano</option>
+              <option value="otoño">Otoño</option>
+              <option value="invierno">Invierno</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="presupuesto">Presupuesto (€):</label>
+            <input
+              type="number"
+              id="presupuesto"
+              name="presupuesto"
+              min="1"
+              max="1000"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="estado_animo">Estado de Ánimo:</label>
+            <select name="estado_animo" id="estado_animo">
+              <option class="placeholder" value="" disabled selected></option>
+              <option value="curioso">Curioso</option>
+              <option value="apresurado">Apresurado</option>
+            </select>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div id="chatbotContainer" class="chatbot-container" style="display: none">
+      <h3>ChatVino - Tu Asistente de Vino</h3>
+      <div id="chatbotMessages" class="chatbot-messages">
+        <!-- Aquí se mostrarán los mensajes del chatbot y del usuario -->
+      </div>
+      <input
+        type="text"
+        id="userInput"
+        class="chatbot-input"
+        placeholder="Escribe aquí tu mensaje..."
+      />
+      <button id="sendMessage" class="chatbot-send">Enviar</button>
+    </div>
+
+    <!-- Elemento de carga -->
+    <div id="loading" class="loading" style="display: none">
+      <div class="bottle"></div>
+    </div>
+    <script src="chatbotScriptContainer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("chatbotForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Obtener los valores del formulario
+            const usuarioId = localStorage.getItem("usuarioId");
+            const tipoEvento = document.getElementById("evento").value;
+            const estacion = document.getElementById("estacion").value;
+            const rangoPrecio = document.getElementById("presupuesto").value;
+            const estadoAnimo = document.getElementById("estado_animo").value;
+
+            console.log("UsuarioID:", usuarioId);
+
+            // Enviar los datos al servidor
+            fetch("http://localhost:3000/api/guardarPreferencias", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                usuarioId,
+                tipoEvento,
+                estacion,
+                rangoPrecio,
+                estadoAnimo,
+              }),
+            })
+              .then((response) => {
+                if (response.ok) {
+                  return response.text();
+                }
+                throw new Error("Error al guardar las preferencias");
+              })
+              .then((data) => {
+                console.log(data);
+                // Aquí puedes manejar la respuesta, como mostrar un mensaje al usuario
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

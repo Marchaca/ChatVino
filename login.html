@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatVino</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+  </head>
+  <body>
+    <!-- Contenido existente... -->
+    <div id="banner">
+      <img
+        src="ImgBarricaBanner.jpg"
+        alt="Selección de vinos españoles"
+        id="banner-img"
+      />
+      <div id="content">
+        <h1>ChatVino</h1>
+        <p>
+          Compra y descubre vinos españoles a través del uso de un Chatbot y
+          vive nuevas experiencias
+        </p>
+        <button
+          onclick="window.location.href='https://chatvino.es/chatvino/login2.html'"
+        >
+          Compra ya
+        </button>
+      </div>
+    </div>
+    <nav id="navigation">
+      <ul>
+        <li>
+          <a href="inicio.html" rel="noopener noreferrer">Inicio</a>
+        </li>
+        <li>
+          <a href="descubre.html" rel="noopener noreferrer">Descubre</a>
+        </li>
+        <li>
+          <a href="login.html" class="active" rel="noopener noreferrer"
+            >Chatbot</a
+          >
+        </li>
+        <li>
+          <a href="login2.html" rel="noopener noreferrer">Vinos</a>
+        </li>
+        <li>
+          <a href="contacto.html" rel="noopener noreferrer">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="Tittle-screen">
+      <h2>Acceso Chatbot</h2>
+    </div>
+    <div class="auth-container">
+      <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="email" id="emailLogin" placeholder="Email" required />
+          <input
+            type="password"
+            id="passwordLogin"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <button onclick="showRegister()">Registrarse</button>
+      </div>
+
+      <div class="register-form" style="display: none">
+        <h2>Registro</h2>
+        <form id="registerForm">
+          <input type="email" id="emailRegistro" placeholder="Email" required />
+          <input
+            type="text"
+            id="nombreRegistro"
+            placeholder="Nombre Usuario"
+            required
+          />
+          <input
+            type="password"
+            id="passwordRegistro"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Registrar</button>
+        </form>
+        <!-- Mensaje de error o éxito -->
+        <button onclick="showLogin()">Ya tengo cuenta</button>
+      </div>
+
+      <script>
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("emailLogin").value;
+            const password = document.getElementById("passwordLogin").value;
+
+            fetch("http://localhost:3000/api/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, password }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  console.log("respuesta mal");
+                  return response.text().then((text) => {
+                    throw new Error(text);
+                  });
+                }
+                console.log("respuesta bien");
+                return response.json();
+              })
+              .then((data) => {
+                localStorage.setItem("usuarioId", data.usuarioId); // Almacenar el UsuarioID
+                window.location.href = "chatbot.html";
+              })
+              .catch((error) => {
+                console.log("error");
+                updateModal(error.message);
+              });
+          });
+
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombreRegistro").value;
+            const email = document.getElementById("emailRegistro").value;
+            const password = document.getElementById("passwordRegistro").value;
+
+            fetch("http://localhost:3000/api/registro", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ nombre, email, password }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  return response.text().then((text) => {
+                    throw new Error(text);
+                  });
+                }
+                console.log("respuesta bien");
+                return response.json();
+              })
+              .then((data) => {
+                localStorage.setItem("usuarioId", data.usuarioId); // Almacenar el UsuarioID
+                window.location.href = "chatbot.html";
+              })
+              .catch((error) => {
+                updateModal(error.message);
+              });
+          });
+        function updateModal(message) {
+          document.getElementById("modalMessage").innerText = message;
+          document.getElementById("errorModal").style.display = "block";
+        }
+
+        function closeModal() {
+          document.getElementById("errorModal").style.display = "none";
+        }
+      </script>
+    </div>
+    <!-- Ventana modal para mensajes -->
+    <div id="errorModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div>
+    <script>
+      function showRegister() {
+        document.querySelector(".login-form").style.display = "none";
+        document.querySelector(".register-form").style.display = "block";
+      }
+
+      function showLogin() {
+        document.querySelector(".login-form").style.display = "block";
+        document.querySelector(".register-form").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

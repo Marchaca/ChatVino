@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+#banner {
+    background-color: #7e0a0a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #5e0808;
+    position: relative;
+    
+}
+#banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+#content {
+    position: relative;
+    z-index: 1;
+}
+#banner h1 {
+    margin: 0;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px #000;
+}
+#banner p {
+    margin: 10px 0 0 0;
+    text-shadow: 1px 1px 2px #000;
+}
+#banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #b71212;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#banner button:hover {
+    background-color: #a00f0f;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+#navigation {
+    background-color: #7e0a0a;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#navigation li {
+    margin: 0;
+    position: relative;
+}
+#navigation li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%; /* Ajusta la posición desde la parte superior */
+    height: 50%; /* Ajusta la altura de la barra */
+    border-right: 1px solid white;
+}
+
+#navigation a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    background-color: #a00f0f;
+}
+#navigation a.active {
+    background-color: #a00f0f;
+    color: white;
+}
+
+
+
+#catalogo {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+  #catalogo h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 15px;
+  }
+  
+  #catalogo p, #how-chatvino-works p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+  }
+
+
+  #catalogo-botellas {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+}
+  
+  #catalogo-botellas h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    border-bottom: 2px solid #000; /* Ajusta el grosor y el color según tus necesidades */
+    display: inline-block; /* Para que el borde sea solo tan ancho como el texto */
+  }
+  
+  #catalogo-botellas p, #how-chatvino-works p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+    margin-left: 10px;
+  }
+
+  #catalogo-botellas p2 {
+    color: #333333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+  }
+
+
+  #catalogo-botellas ul {
+    list-style-type: disc; /* Estilo de lista */
+    padding-left: 20px; /* Ajustar según sea necesario */
+    color: #5e0808; /* Color de los puntos de la lista */
+}
+  
+#catalogo-botellas li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px; /* Ajusta el espacio entre los elementos de la lista */
+    
+}
+
+  #catalogo-botellas li:first-child {
+    margin-top: 0; /* Elimina el margen superior del primer elemento de la lista */
+}
+
+  
+  #catalogo-botellas h3 {
+    margin: 10px; /* Ajustar el margen del título de cada botella */
+    color: #5e0808;
+  }
+
+
+  #catalogo-botellas img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    border: 2px solid #5e0808;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    transition: transform 0.3s ease; /* Añade suavidad al efecto de zoom */
+}
+
+#catalogo-botellas img:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen al pasar el ratón por encima */
+}
+
+
+
+.star {
+    cursor: pointer;
+    color: rgb(55, 54, 52);
+    margin-left: 10px;
+}
+
+.rate-text {
+    margin-right: 10px;
+    color: #333; /* O el color que prefieras para el texto */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.star:hover, .star.hovered {
+    color: gold;
+  }
+
+
+  #login-section {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+    display: flex;
+    flex-direction: column; /* Cambio importante para alinear los elementos verticalmente */
+    align-items: center;
+}
+
+#login-section h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 15px;
+}
+
+#login-section input {
+    display: block; /* Hace que cada input ocupe su propia línea */
+    width: 100%; /* Opcional: Hace que los input ocupen todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio entre los campos de entrada */
+}
+
+
+
+.btn-comprar {
+    background-color: #5e0808; /* Color de fondo rojo */
+    color: white; /* Texto en color blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero para indicar que es clickeable */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 20px; /* Margen superior para separarlo de otros elementos */
+    margin-left: 10px;
+}
+
+.btn-comprar:hover {
+    background-color: darkred; /* Color de fondo más oscuro al pasar el mouse por encima */
+}
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: rgb(202, 160, 160);
+  margin: 15% auto;
+  padding: 20px;
+  border: 3px solid #5e0808;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.close-button {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.first-item {
+    margin-top: 100px; /* Ajusta este valor según tus necesidades */
+}
+
+
+#catalogo-botellas ul li:first-child {
+    margin-top: 50px; /* Ajusta este valor según tus necesidades */
+}

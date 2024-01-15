@@ -1,0 +1,421 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+#banner {
+    background-color: #7e0a0a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #5e0808;
+    position: relative;
+    
+}
+#banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+#content {
+    position: relative;
+    z-index: 1;
+}
+#banner h1 {
+    margin: 0;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px #000;
+}
+#banner p {
+    margin: 10px 0 0 0;
+    text-shadow: 1px 1px 2px #000;
+}
+#banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #b71212;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#banner button:hover {
+    background-color: #a00f0f;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+#navigation {
+    background-color: #7e0a0a;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#navigation li {
+    margin: 0;
+    position: relative;
+}
+#navigation li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%; /* Ajusta la posición desde la parte superior */
+    height: 50%; /* Ajusta la altura de la barra */
+    border-right: 1px solid white;
+}
+
+#navigation a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    background-color: #a00f0f;
+}
+#navigation a.active {
+    background-color: #a00f0f;
+    color: white;
+}
+
+.about-chatvino {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+    position: relative;
+    align-items: center;
+}
+  
+.about-chatvino h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 15px;
+}
+  
+.about-chatvino p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+}
+
+
+
+
+
+.chatbot-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #f8f8f8;
+    margin-top: -60px;
+}
+
+.chatbot-instructions {
+    flex: 1; /* Toma el 50% del ancho disponible */
+    padding: 20px;
+    margin-right: 20px; /* Espacio entre las instrucciones y el formulario */
+    border: 4px solid #5e0808;
+    border-radius: 10px;
+    background-color: rgb(202, 160, 160);
+    margin-top: 100px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  /* Iluminación animada */
+  animation: rotateLight 1s linear infinite;
+
+}
+
+/* Animación de rotación de luz */
+@keyframes rotateLight {
+    0% {
+      box-shadow: 0 0 10px rgba(139,0,0,0.9), 0 0 30px rgba(139,0,0,0.8), 0 0 50px rgba(139,0,0,0.7);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(139,0,0,0.7), 0 0 30px rgba(139,0,0,0.6), 0 0 50px rgba(139,0,0,0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(139,0,0,0.9), 0 0 30px rgba(139,0,0,0.8), 0 0 50px rgba(139,0,0,0.7);
+    }
+  }
+
+.chatbot-instructions h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.chatbot-instructions p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+}
+
+.chatbot-instructions ul {
+    list-style-type: none; /* Esto es por defecto para las listas desordenadas */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+}
+
+.chatbot-instructions li {
+    position: relative;
+    color: #333; /* O el color que prefieras para el texto de la lista */
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Tipo de letra */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+    margin-bottom: 15px;
+}
+.chatbot-instructions li::before {
+    content: '•'; /* Carácter Unicode para un punto grueso */
+    color: #5e0808; /* Color del punto */
+    font-size: 30px; /* Aumenta el tamaño del punto */
+    position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+    left: 0; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+    top: 24%; /* Ajusta la posición vertical del punto */
+    transform: translate(0, -40%); /* Centra el punto verticalmente respecto al texto */
+}
+
+.chatbot-form-container {
+    flex: 1; /* Toma el 50% del ancho disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.chatbot-form-container h2 {
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 15px;
+}
+
+.chatbot-form {
+    border: 4px solid #5e0808;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ancho relativo al tamaño de la ventana */
+    max-width: 600px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 800px) {
+    .chatbot-page-container {
+        flex-direction: column;
+    }
+
+    .chatbot-instructions, .chatbot-form-container {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho del contenedor */
+}
+
+.chatbot-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5e0808;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a00f0f;
+}
+
+.contenido-restringido {
+    display: none;
+}
+
+/* Estilos para el elemento <select> */
+select {
+    color: black; /* Color predeterminado */
+}
+
+
+/* Estilos para las opciones deshabilitadas (placeholder) */
+select option[disabled] {
+    color: grey; /* Color para las opciones deshabilitadas, por ejemplo, el placeholder */
+}
+
+/* Estilos para las opciones de placeholder */
+select .placeholder {
+    color: grey; /* Cambia el color a gris */
+}
+
+/* Estilos para las opciones seleccionables */
+select option {
+    color: black; /* Asegura que el texto de las opciones seleccionables sea negro */
+}
+
+.chatbot-container {
+    width: 100%;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    border: 4px solid #5e0808;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .chatbot-container h3{
+    color: #5e0808;
+  }
+
+  
+  .chatbot-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .chatbot-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .chatbot-send {
+    width: 50px;
+    height: 30px;
+    background-color: #5e0808;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chatbot-send:hover {
+    background-color: #a00f0f;
+  }
+
+  .loading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bottle {
+    width: 40px;
+    height: 100px;
+    background: transparent;
+    border: 5px solid #5e0808;
+    border-radius: 20px/10px;
+    position: relative;
+    animation: spin 2s linear infinite;
+  }
+  
+  .bottle::before, .bottle::after {
+    content: '';
+    position: absolute;
+    background: #5e0808;
+  }
+  
+  .bottle::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bottle::after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+
+  .user-message {
+    background-color: #7e0a0a; /* Color rojo para el bocadillo */
+    color: white; /* Texto en color blanco */
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+    align-self: flex-start; /* Alinea a la derecha */
+  }
+  
+  .chatbot-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alineación de los mensajes */
+    overflow-y: auto; /* Para desplazamiento vertical */
+    padding: 10px;
+    height: 300px; /* Altura fija o ajustable para el área del chat */
+    border: 2px solid #5e0808;
+  }
+
+  .chatbot-message {
+    background-color: #007bff; /* Color azul para el bocadillo */
+    color: white; /* Texto en color blanco */
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+    align-self: flex-end; /* Alinea a la izquierda */
+    animation: slideFadeIn 0.5s ease-out;
+}
+
+@keyframes slideFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

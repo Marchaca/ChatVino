@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+#banner {
+    background-color: #7e0a0a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #5e0808;
+    position: relative;
+    
+}
+#banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+#content {
+    position: relative;
+    z-index: 1;
+}
+#banner h1 {
+    margin: 0;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px #000;
+}
+#banner p {
+    margin: 10px 0 0 0;
+    text-shadow: 1px 1px 2px #000;
+}
+#banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #b71212;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#banner button:hover {
+    background-color: #a00f0f;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+#navigation {
+    background-color: #7e0a0a;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#navigation li {
+    margin: 0;
+    position: relative;
+}
+#navigation li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%; /* Ajusta la posición desde la parte superior */
+    height: 50%; /* Ajusta la altura de la barra */
+    border-right: 1px solid white;
+}
+
+#navigation a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    background-color: #a00f0f;
+}
+#navigation a.active {
+    background-color: #a00f0f;
+    color: white;
+}
+
+#find-chatvino-intro {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+    position: relative;
+    align-items: center;
+}
+
+#find-chatvino-intro h2 {
+    text-align: center; /* Centra el título */
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+#find-chatvino-intro p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+}
+
+#find-chatvino-intro ul {
+    list-style-type: none; /* Esto es por defecto para las listas desordenadas */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+}
+
+#find-chatvino-intro li {
+    position: relative;
+    color: #333; /* O el color que prefieras para el texto de la lista */
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Tipo de letra */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+    margin-bottom: 15px;
+}
+#find-chatvino-intro li::before {
+    content: '•'; /* Carácter Unicode para un punto grueso */
+    color: #5e0808; /* Color del punto */
+    font-size: 30px; /* Aumenta el tamaño del punto */
+    position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+    left: 0; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+    top: 24%; /* Ajusta la posición vertical del punto */
+    transform: translate(0, -50%); /* Centra el punto verticalmente respecto al texto */
+}
+
+
+#find-chatvino-intro .sub-points {
+    position: relative;
+    margin-right: 1300px;
+    background-color: #df8787;
+    border: 1px solid #ccc; /* Un borde sutil */
+    border-radius: 5px; /* Bordes redondeados para el cuadro */
+    padding-left: 20px; /* Esto añade un espacio interior para alinear con el contenido del punto principal */
+}
+
+#find-chatvino-intro .sub-points li {
+    position: relative;
+    color: #333; /* O el color que prefieras para el texto de la lista */
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Tipo de letra */
+    padding-left: 40px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#find-chatvino-intro .sub-points li::before {
+    content: '•'; /* Carácter Unicode para un punto grueso */
+    color: #5e0808; /* Color del punto */
+    font-size: 25px; /* Ajusta el tamaño del punto si es necesario */
+    position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+    left: 20px; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+    top: 45%; /* Empieza en la mitad de la altura del 'li' */
+    transform: translateY(-50%); /* Ajusta la posición vertical del punto */
+}
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform: translateY(100%);
+    transition: transform 1s;
+    animation: bounce 5s ease infinite; /* Aplica la animación aquí */
+}
+
+
+.popup-content {
+    background-color: rgb(202, 160, 160);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    border: 3px solid #5e0808;  /* Añadido borde negro */
+}
+
+.close {
+    position: absolute;
+    top: 0;  /* Valor ajustado */
+    right: 0;  /* Valor ajustado */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;  /* Añadido para un área de clic más grande */
+}
+
+.popup:hover {
+  animation-play-state: paused; /* Pausa la animación cuando el ratón está encima */
+}
+
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+}
+40% {
+    transform: translateY(-30px);
+}
+60% {
+    transform: translateY(-15px);
+}
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente si es necesario */
+    padding: 20px; /* Agrega padding según sea necesario */
+  }
+  
+  .section-content-find {
+    flex: 1; /* Ocupa el 50% del contenedor */
+    padding-right: 0px; /* Agrega padding si es necesario */
+    background-color: rgb(202, 160, 160); /* Mantén el color de fondo como está */
+    border-radius: 10px; /* Si deseas bordes redondeados */
+    border: 4px solid #5e0808;
+    animation: glow 1s infinite alternate;
+  }
+
+  /* Define la animación que cambia el box-shadow para crear un efecto de iluminación */
+@keyframes glow {
+    0% {
+      box-shadow: 4px 4px 8px rgba(255, 15, 2, 0.963);
+    }
+    100% {
+      box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .section-content-find li {
+    flex: 1; /* Ocupa el 50% del contenedor */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 20px; /* Agrega padding si es necesario */
+    background-color: rgb(202, 160, 160); /* Mantén el color de fondo como está */
+  }
+
+  #find-chatvino-intro .section-content-find li::before {
+    content: '•'; /* Carácter Unicode para un punto grueso */
+    color: #5e0808; /* Color del punto */
+    font-size: 30px; /* Ajusta el tamaño del punto si es necesario */
+    position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+    left: 0px; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+    top: 45%; /* Empieza en la mitad de la altura del 'li' */
+    transform: translateY(-50%); /* Ajusta la posición vertical del punto */
+}
+
+  
+  .image-container {
+    flex: 0.8; /* Ocupa el 50% del contenedor */
+    display: flex;
+    margin-left: -100px;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+  }
+  
+  .image-container img {
+    max-width: 40%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: auto;
+    border-radius: 35%; /* Bordes redondeados para el cuadro */
+    border: 4px solid #08305e;
+    position: relative;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes neon {
+    from {
+      box-shadow: 
+        0 0 4px #08305e, 
+        0 0 8px #08305e; /* Un efecto inicial más notorio */
+    }
+    to {
+      box-shadow: 
+        0 0 10px #08305e, 
+        0 0 20px #08305e, /* Un efecto final más grande y brillante */
+        0 0 30px #08305e; /* Añade una tercera capa de neón para más intensidad */
+    }
+  }
+
+  #exploracion-variedades-vino {
+    background-color: #f8f8f8; /* O el color de fondo que prefieras */
+    padding: 20px;
+    margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+    position: relative;
+    align-items: center;
+  }
+
+  #exploracion-variedades-vino p2 {
+    padding: 0px;
+    font-size: 18px; /* Ajusta el tamaño del punto si es necesario */
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 100px;
+  }
+
+  #exploracion-variedades-vino p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+  }
+
+  #exploracion-variedades-vino h2 {
+    text-align: center; /* Centra el título */
+    color: #5e0808; /* O el color que estés usando para los títulos */
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+#exploracion-variedades-vino ul {
+    list-style-type: none; /* Esto es por defecto para las listas desordenadas */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+}
+
+#exploracion-variedades-vino li {
+    position: relative;
+    color: #333; /* O el color que prefieras para el texto de la lista */
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Tipo de letra */
+    padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+    /* Agrega cualquier otro estilo que prefieras */
+    margin-bottom: 15px;
+}
+#exploracion-variedades-vino li::before {
+    content: '•'; /* Carácter Unicode para un punto grueso */
+    color: #5e0808; /* Color del punto */
+    font-size: 30px; /* Aumenta el tamaño del punto */
+    position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+    left: 0; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+    top: 28%; /* Ajusta la posición vertical del punto */
+    transform: translate(0, -50%); /* Centra el punto verticalmente respecto al texto */
+}
+
+#exploracion-variedades-vino p {
+    color: #333; /* O el color que prefieras para el texto */
+    line-height: 1.6;
+  }
+
+  
+  .variedades-content p {
+    margin-bottom: 20px;
+    margin-left: 40px;
+    color: #333; /* O el color que prefieras para el texto */
+    text-align: left;
+  }
+  
+  .variedad-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 1s cubic-bezier(0.68, -0.10, 0.27, 1.55);
+  }
+  
+  .carousel-slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del ancho del carousel */
+    text-align: center;
+  }
+  
+  .carousel-slide img {
+    width: 30%; /* Ajusta según tus necesidades */
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #5e0808;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5e0808;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Añade la transición para el efecto de presión */
+}
+
+.carousel-button:active {
+    transform: scale(0.9) translateY(-50%); /* Escala el botón cuando está activo/presionado */
+}
+
+  
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  
+
+

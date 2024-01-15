@@ -1,0 +1,101 @@
+¿Podrían ayudarme con mi cuenta, por favor?
+Necesito asistencia para realizar un pedido, ¿me pueden asistir?
+Estoy enfrentando un problema con mi compra y requiero ayuda.
+¿Podrían explicarme cómo cambiar mi contraseña?
+Necesito información detallada sobre un producto específico.
+¿Me ayudarían a encontrar un artículo en particular?
+Tengo una duda sobre mi factura, necesito ayuda para entenderla.
+¿Cómo puedo obtener asistencia para rastrear mi envío?
+Requiero ayuda con el proceso de una devolución, ¿podrían asistirme?
+Hay un problema con un artículo que recibí, necesito ayuda para solucionarlo.
+¿Cómo puedo actualizar mi información de envío? Necesito orientación.
+Necesito asistencia para procesar un reembolso, ¿me pueden ayudar?
+¿Cómo puedo obtener ayuda para cancelar un pedido?
+Tengo una consulta sobre sus servicios y necesito algo de ayuda.
+¿Cuál es la mejor manera de contactar con atención al cliente para obtener ayuda?
+Necesito asistencia para acceder a mi cuenta, ¿pueden ayudarme?
+¿Podrían explicarme cómo funciona esto? Necesito una guía detallada.
+Estoy experimentando un problema con un pago y requiero asistencia.
+Necesito ayuda para modificar mi pedido, ¿me podrían asesorar?
+¿Podrían ayudarme a entender mi factura? Hay detalles que no comprendo.
+¿Me podrían ayudar a configurar mi cuenta? Necesito orientación.
+Tengo una consulta sobre mi suscripción y busco asistencia para resolverla.
+Necesito asistencia técnica, ¿me pueden ayudar?
+Estoy teniendo un problema con vuestra aplicación y necesito ayuda para solucionarlo.
+¿Cómo puedo obtener ayuda para cancelar mi suscripción?
+Necesito asistencia para navegar en su sitio web, ¿pueden guiarme?
+¿Podrían proporcionarme información detallada sobre vuestras políticas?
+Tengo una pregunta sobre un cargo en mi cuenta y necesito ayuda para entenderlo.
+¿Cómo puedo obtener ayuda para hacer una queja?
+Necesito orientación sobre cómo usar este servicio eficientemente.
+¿Podrían proporcionarme más detalles sobre esto? Necesito entenderlo mejor.
+¿Me pueden ayudar a instalar este software? No estoy seguro de cómo hacerlo.
+Estoy enfrentando un error en la aplicación, ¿cómo puedo obtener ayuda para resolverlo?
+Tengo un problema con mi dispositivo y necesito asistencia técnica.
+¿Podrían ayudarme a entender este error que estoy experimentando?
+Necesito ayuda para recuperar mi cuenta, ¿me pueden orientar?
+¿Cómo puedo reportar un problema y obtener ayuda para solucionarlo?
+Estoy teniendo dificultades para iniciar sesión, ¿pueden asistirme?
+Necesito asistencia para actualizar mi perfil, ¿me podrían guiar?
+Tengo una pregunta sobre vuestras ofertas y necesito ayuda para comprenderlas.
+¿Cómo puedo cambiar mi método de pago? Requiero asistencia.
+Necesito ayuda para programar una cita, ¿me podrían orientar?
+Tengo una consulta sobre vuestras horas de servicio y necesito información.
+¿Cómo puedo obtener un manual de usuario con instrucciones claras?
+Necesito ayuda para seguir estas instrucciones paso a paso.
+¿Me pueden explicar las características de este producto? Requiero asistencia.
+Necesito asesoramiento para elegir el producto adecuado, ¿pueden ayudarme?
+Tengo una pregunta sobre la garantía del producto y necesito ayuda para entenderla.
+¿Cómo puedo obtener asistencia en vivo para resolver mis dudas?
+Necesito ayuda para comprender los términos y condiciones de manera detallada.
+¿Podrías guiarme en cómo usar esta función?
+Necesito instrucciones para realizar un cambio.
+¿Cómo puedo aplicar un descuento en mi compra?
+Necesito asistencia con un error del sistema.
+¿Puedes mostrarme cómo encontrar cierta información?
+Tengo preguntas sobre cómo participar en su programa.
+Necesito consejos sobre la mejor opción para mi necesidad.
+¿Cómo puedo desactivar mi cuenta?
+Necesito ayuda para entender una política específica.
+¿Puedes ayudarme a navegar por tu sitio web?
+Tengo un problema al descargar un archivo.
+Necesito ayuda para interpretar estos resultados.
+¿Cómo puedo obtener un duplicado de mi recibo?
+Tengo problemas para acceder a ciertos servicios.
+¿Puedes ayudarme a solucionar un error de conexión?
+Necesito información sobre cómo actualizar mis datos.
+¿Cómo puedo inscribirme en este evento?
+Necesito asistencia para resolver un problema técnico.
+Tengo una consulta sobre la compatibilidad de un producto.
+¿Cómo puedo acceder a mi historial de compras?
+Necesito orientación sobre la configuración de privacidad.
+¿Puedes asistirme en la resolución de un conflicto?
+Necesito ayuda para elegir el tamaño adecuado de un producto.
+Tengo un problema con la visualización de un contenido.
+¿Cómo puedo recuperar un archivo perdido?
+Necesito información sobre las opciones de envío.
+¿Cómo puedo cambiar mi método de entrega?
+Necesito ayuda para entender este mensaje de error.
+¿Cómo puedo verificar el estado de mi solicitud?
+Necesito orientación sobre cómo completar este formulario.
+¿Puedes ayudarme a entender las especificaciones técnicas?
+Tengo un problema con el seguimiento de mi pedido.
+Necesito ayuda para resolver un desajuste de información.
+¿Cómo puedo corregir un error en mi pedido?
+Necesito asesoramiento sobre un servicio específico.
+¿Cómo puedo obtener una copia de mi contrato?
+Tengo dudas sobre el proceso de verificación.
+Necesito orientación sobre cómo realizar un pago.
+¿Puedes ayudarme a elegir entre varias opciones?
+Tengo preguntas sobre la renovación automática.
+Necesito información sobre cómo cancelar un servicio.
+¿Cómo puedo obtener soporte técnico?
+Necesito ayuda para entender los cargos en mi cuenta.
+¿Puedes explicarme este término técnico?
+Tengo problemas para usar una función específica.
+Necesito orientación sobre cómo reclamar una garantía.
+¿Cómo puedo cambiar la configuración de mi cuenta?
+Tengo preguntas sobre cómo mejorar mi experiencia.
+Necesito ayuda para interpretar estos términos de servicio.
+¿Cómo puedo obtener una copia de mi historial de transacciones?
+Necesito que me ayudes a encontrar una botella de vino.

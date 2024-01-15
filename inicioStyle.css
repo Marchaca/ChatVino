@@ -1,0 +1,592 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+}
+#banner {
+  background-color: #7e0a0a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #5e0808;
+  position: relative;
+}
+#banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 0;
+}
+#content {
+  position: relative;
+  z-index: 1;
+}
+#banner h1 {
+  margin: 0;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px #000;
+}
+#banner p {
+  margin: 10px 0 0 0;
+  text-shadow: 1px 1px 2px #000;
+}
+#banner button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #b71212;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+#banner button:hover {
+  background-color: #a00f0f;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+#navigation {
+  background-color: #7e0a0a;
+}
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#navigation li {
+  margin: 0;
+  position: relative;
+}
+#navigation li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%; /* Ajusta la posición desde la parte superior */
+  height: 50%; /* Ajusta la altura de la barra */
+  border-right: 1px solid white;
+}
+
+#navigation a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  background-color: #a00f0f;
+}
+#navigation a.active {
+  background-color: #a00f0f;
+  color: white;
+}
+#about-chatvino {
+  background-color: #f8f8f8; /* O el color de fondo que prefieras */
+  padding: 20px;
+  margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#about-chatvino h2 {
+  color: #5e0808; /* O el color que estés usando para los títulos */
+  margin-bottom: 15px;
+}
+
+#about-chatvino p,
+#how-chatvino-works p {
+  color: #333; /* O el color que prefieras para el texto */
+  line-height: 1.6;
+}
+.about-image {
+  width: 50%; /* O el ancho que prefieras */
+  max-width: 200px; /* O un máximo que se vea bien en tu diseño */
+  margin-right: 25px; /* Espacio entre la imagen y el texto */
+  border: 4px solid #5e0808;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+  border-radius: 10px; /* Si deseas bordes redondeados */
+}
+
+.about-text {
+  width: 100%; /* O el ancho que prefieras */
+}
+#how-chatvino-works {
+  background-color: #f8f8f8; /* O el color de fondo que prefieras */
+  padding: 20px;
+  margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+  display: block; /* Cambio a block para tener un flujo normal del documento */
+}
+#how-chatvino-works h2 {
+  text-align: center; /* Centra el título */
+  color: #5e0808; /* O el color que estés usando para los títulos */
+  margin-bottom: 15px;
+}
+#how-chatvino-works .section-content {
+  text-align: left; /* Alinea a la izquierda el contenido */
+}
+#how-chatvino-works li {
+  color: #333; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  font-family: "Georgia", serif; /* Tipo de letra */
+  margin-bottom: 5px; /* Espaciado debajo de cada elemento de la lista */
+}
+
+#how-chatvino-works .section-content ol {
+  padding-left: 0; /* Elimina el padding por defecto para alinear con el contenido */
+  list-style: none; /* Elimina los números por defecto */
+  counter-reset: list-counter; /* Crea un contador para la lista */
+}
+
+#how-chatvino-works .section-content ol li {
+  counter-increment: list-counter; /* Incrementa el contador para cada elemento de la lista */
+  line-height: 1.6; /* Espaciado entre líneas */
+  font-family: "Georgia", serif; /* Tipo de letra */
+  margin-bottom: 5px; /* Espaciado debajo de cada elemento de la lista */
+  position: relative; /* Permite posicionar el número respecto al elemento de la lista */
+  padding-left: 30px; /* Espacio para el número */
+  position: relative;
+  padding-left: 30px;
+  margin-left: 0px; /* Asegúrate de que el primer elemento no tiene margen extra */
+}
+
+#how-chatvino-works .section-content ol li:nth-child(2) {
+  margin-left: 25px; /* Ajusta el margen para el segundo elemento */
+}
+
+#how-chatvino-works .section-content ol li:nth-child(3) {
+  margin-left: 50px; /* Ajusta el margen para el tercer elemento */
+}
+
+#how-chatvino-works .section-content ol li:nth-child(4) {
+  margin-left: 75px; /* Ajusta el margen para el cuarto elemento */
+}
+
+#how-chatvino-works .section-content ol li:nth-child(5) {
+  margin-left: 100px; /* Ajusta el margen para el quinto elemento */
+}
+
+#how-chatvino-works .section-content ol li:before {
+  content: counter(list-counter) ". "; /* Inserta el número con un punto y un espacio */
+  position: absolute; /* Posiciona el número de forma absoluta */
+  left: 0; /* Alinea el número al borde izquierdo del contenido de la lista */
+  color: #000000; /* Color del número */
+  font-weight: bold; /* Si quieres que los números sean en negrita */
+  /* Ajusta tamaño de fuente, estilo, etc., según sea necesario */
+}
+
+#how-chatvino-works .section-content ol {
+  flex-basis: 50%; /* Ancho del text-box */
+  margin-left: 20%; /* Espacio entre list-container y text-box */
+  padding: 10px 10px; /* Ajusta el padding si es necesario */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+  border-radius: 10px; /* Mantén los bordes redondeados como están */
+  background-color: rgb(202, 160, 160); /* Mantén el color de fondo como está */
+  font-family: "Georgia", serif; /* Tipo de letra */
+  color: #333; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  /* Puedes eliminar la propiedad display: inline-block; ya que flexbox está controlando el flujo */
+}
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transform: translateY(100%);
+  transition: transform 1s;
+  animation: bounce 5s ease infinite; /* Aplica la animación aquí */
+}
+
+.popup-content {
+  background-color: rgb(202, 160, 160);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  border: 3px solid #5e0808; /* Añadido borde negro */
+}
+
+.close {
+  position: absolute;
+  top: 0; /* Valor ajustado */
+  right: 0; /* Valor ajustado */
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px; /* Añadido para un área de clic más grande */
+}
+
+.popup:hover {
+  animation-play-state: paused; /* Pausa la animación cuando el ratón está encima */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Esto separa los dos elementos */
+  align-items: flex-start; /* Esto alinea los elementos al inicio de la sección transversal */
+  position: relative;
+}
+
+.list-container {
+  flex-basis: 50%; /* Esto da al list-container una base del 50% del espacio disponible */
+  /* Otros estilos de list-container */
+}
+.flex-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos hijo */
+  align-items: flex-start; /* Alinea los elementos al inicio del eje transversal */
+  position: relative; /* Establece una posición relativa para el contenedor flex */
+  padding: 10px; /* Agrega padding si es necesario para evitar que los elementos toquen los bordes del contenedor */
+}
+
+/* El pseudo-elemento para la línea vertical */
+.flex-container::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Comienza desde el top del contenedor */
+  bottom: 0; /* Se extiende hasta el fondo del contenedor */
+  left: 50%; /* Se posiciona en la mitad del contenedor */
+  width: 2px; /* El grosor de la línea vertical */
+  background-color: #5e0808; /* El color de la línea vertical */
+  transform: translateX(-50%); /* Centra la línea vertical */
+  z-index: 0;
+}
+
+.text-box {
+  flex-basis: 50%; /* Ancho del text-box */
+  margin-left: 20%; /* Espacio entre list-container y text-box */
+  padding: 10px 10px; /* Ajusta el padding si es necesario */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+  border-radius: 10px; /* Mantén los bordes redondeados como están */
+  background-color: rgb(202, 160, 160); /* Mantén el color de fondo como está */
+  font-family: "Georgia", serif; /* Tipo de letra */
+  color: #333; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  /* Puedes eliminar la propiedad display: inline-block; ya que flexbox está controlando el flujo */
+}
+
+.text-box:hover {
+  transform: scale(1.05); /* Hace que el elemento se haga un poco más grande */
+  transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+/* Otra opción es cambiar el color de fondo suavemente al pasar el ratón por encima */
+.text-box:hover {
+  background-color: #cb8d8d; /* Cambia al color que prefieras */
+  transition: background-color 0.3s ease; /* Añade una transición suave */
+}
+
+/* Para una animación más compleja, puedes usar keyframes */
+@keyframes rotateAndScale {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.text-box:hover {
+  animation: rotateAndScale 1s infinite alternate;
+}
+
+.text-box:hover span {
+  font-weight: bold; /* Cambia el peso de la fuente a negrita */
+}
+
+#ventajas-chatvino h2 {
+  text-align: left; /* Centra el título */
+  margin-top: 0px;
+  color: #5e0808; /* O el color que estés usando para los títulos */
+  margin-bottom: 15px;
+}
+#ventajas-chatvino {
+  background-color: #f8f8f8; /* O el color de fondo que prefieras */
+  padding: 20px;
+  margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+  position: relative;
+  display: flex;
+  align-items: left;
+}
+#ventajas-chatvino p {
+  color: #333; /* O el color que prefieras para el texto */
+  line-height: 1.6;
+  font-family: "Georgia", serif; /* Tipo de letra */
+}
+#ventajas-chatvino ul {
+  list-style-type: none; /* Esto es por defecto para las listas desordenadas */
+  padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+  /* Agrega cualquier otro estilo que prefieras */
+}
+
+#ventajas-chatvino li {
+  position: relative;
+  color: #333; /* O el color que prefieras para el texto de la lista */
+  line-height: 1.6;
+  font-family: "Georgia", serif; /* Tipo de letra */
+  padding-left: 20px; /* Ajusta el espacio interior del lado izquierdo */
+  /* Agrega cualquier otro estilo que prefieras */
+}
+#ventajas-chatvino li::before {
+  content: "•"; /* Carácter Unicode para un punto grueso */
+  color: #5e0808; /* Color del punto */
+  font-size: 30px; /* Aumenta el tamaño del punto */
+  position: absolute; /* Posicionamiento absoluto respecto al elemento li */
+  left: 0; /* Ajusta la posición horizontal del punto (cambia esto si es necesario) */
+  top: 50%; /* Ajusta la posición vertical del punto */
+  transform: translate(
+    0,
+    -50%
+  ); /* Centra el punto verticalmente respecto al texto */
+}
+
+.ventajas-image {
+  width: 50%; /* O el ancho que prefieras */
+  max-width: 100px; /* O un máximo que se vea bien en tu diseño */
+  max-height: 100px;
+  margin-right: 50px; /* Espacio entre la imagen y el texto */
+  margin-top: 20px;
+  border: 4px solid #5e0808;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+  border-radius: 100px; /* Si deseas bordes redondeados */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+
+  /* Inicia la animación */
+  animation: glow 2s infinite alternate;
+}
+
+.ventajas-text {
+  width: 100%; /* O el ancho que prefieras */
+}
+
+/* Define la animación que cambia el box-shadow para crear un efecto de iluminación */
+@keyframes glow {
+  0% {
+    box-shadow: 4px 4px 8px rgba(255, 15, 2, 0.963);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.7);
+  }
+}
+
+#busquedaPersonalizada-chatvino {
+  background-color: #f8f8f8; /* O el color de fondo que prefieras */
+  padding: 20px;
+  margin-top: 20px; /* Asegúrate de que tiene un espaciado adecuado respecto a los elementos anteriores */
+  position: relative;
+}
+
+#busquedaPersonalizada-chatvino h2 {
+  text-align: center; /* Centra el título */
+  margin-top: 10px;
+  color: #5e0808; /* O el color que estés usando para los títulos */
+  margin-bottom: 15px;
+}
+
+#busquedaPersonalizada-chatvino p {
+  color: #333; /* O el color que prefieras para el texto */
+  line-height: 1.6;
+  margin-left: 50px;
+  text-align: left;
+}
+
+#busquedaPersonalizada-chatvino ul {
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  padding: 0; /* Elimina el padding predeterminado */
+  position: relative;
+  margin-left: 50px;
+}
+
+#busquedaPersonalizada-chatvino li {
+  display: inline-block;
+  background-color: #f8f8f8; /* Un color de fondo suave */
+  border-left: 10px solid #5e0808; /* Una barra lateral para destacar */
+  margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+  padding: 20px; /* Espacio interno dentro de cada caja */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Una sombra suave para dar profundidad */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: transform 0.3s ease; /* Suaviza la transición */
+  position: relative;
+}
+
+#busquedaPersonalizada-chatvino li:hover {
+  transform: scale(
+    1.09
+  ); /* Aumenta el tamaño cuando el ratón pasa por encima */
+}
+
+#busquedaPersonalizada-chatvino li:hover {
+  background-color: #cb8d8d; /* Cambia el color de fondo al pasar el ratón por encima */
+  cursor: pointer; /* Cambia el cursor para indicar interactividad */
+}
+
+/* Estilos opcionales para los elementos strong dentro de los li para dar más énfasis */
+#busquedaPersonalizada-chatvino li strong {
+  color: #5e0808; /* Un color que destaque */
+  font-weight: bold; /* Asegura que está en negrita */
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text {
+  visibility: hidden;
+  width: 520px; /* O el ancho que prefieras */
+  background-color: #cc7575; /* O el color de fondo que prefieras */
+  color: #000000; /* Color del texto */
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 15px; /* Espacio vertical */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+
+  /* Posicionamiento */
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 200%;
+  margin-left: 293px; /* Desplaza hacia la izquierda la mitad del ancho del tooltip */
+  margin-bottom: -120px; /* Espacio entre el tooltip y el elemento `li` */
+
+  /* Estilos para la transición y visibilidad */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  animation: glow 0.5s infinite alternate;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text strong {
+  color: #000000; /* Un color que destaque */
+  font-weight: bold; /* Asegura que está en negrita */
+}
+
+#busquedaPersonalizada-chatvino li:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-DO {
+  visibility: hidden;
+  width: 520px; /* O el ancho que prefieras */
+  background-color: #cc7575; /* O el color de fondo que prefieras */
+  color: #000000; /* Color del texto */
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 15px; /* Espacio vertical */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+
+  /* Posicionamiento */
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 200%;
+  margin-left: -65px; /* Desplaza hacia la izquierda la mitad del ancho del tooltip */
+  margin-bottom: -85px; /* Espacio entre el tooltip y el elemento `li` */
+
+  /* Estilos para la transición y visibilidad */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  animation: glow 0.5s infinite alternate;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-DO strong {
+  color: #000000; /* Un color que destaque */
+  font-weight: bold; /* Asegura que está en negrita */
+}
+
+#busquedaPersonalizada-chatvino li:hover .tooltip-text-DO {
+  visibility: visible;
+  opacity: 1;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-TE {
+  visibility: hidden;
+  width: 520px; /* O el ancho que prefieras */
+  background-color: #cc7575; /* O el color de fondo que prefieras */
+  color: #000000; /* Color del texto */
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 15px; /* Espacio vertical */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+
+  /* Posicionamiento */
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 200%;
+  margin-left: 240px; /* Desplaza hacia la izquierda la mitad del ancho del tooltip */
+  margin-bottom: -15px; /* Espacio entre el tooltip y el elemento `li` */
+
+  /* Estilos para la transición y visibilidad */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  animation: glow 0.5s infinite alternate;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-TE strong {
+  color: #000000; /* Un color que destaque */
+  font-weight: bold; /* Asegura que está en negrita */
+}
+
+#busquedaPersonalizada-chatvino li:hover .tooltip-text-TE {
+  visibility: visible;
+  opacity: 1;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-PB {
+  visibility: hidden;
+  width: 520px; /* O el ancho que prefieras */
+  background-color: #cc7575; /* O el color de fondo que prefieras */
+  color: #000000; /* Color del texto */
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 15px; /* Espacio vertical */
+  border: 3px solid #5e0808; /* Mantén el borde como está */
+
+  /* Posicionamiento */
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 200%;
+  margin-left: 198px; /* Desplaza hacia la izquierda la mitad del ancho del tooltip */
+  margin-bottom: 75px; /* Espacio entre el tooltip y el elemento `li` */
+
+  /* Estilos para la transición y visibilidad */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  animation: glow 0.5s infinite alternate;
+}
+
+#busquedaPersonalizada-chatvino .tooltip-text-PB strong {
+  color: #000000; /* Un color que destaque */
+  font-weight: bold; /* Asegura que está en negrita */
+}
+
+#busquedaPersonalizada-chatvino li:hover .tooltip-text-PB {
+  visibility: visible;
+  opacity: 1;
+}
